@@ -1,0 +1,30 @@
+/* Style for the doc page */
+.container {
+  margin: 3em;
+  width: 90%;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 20em;
+}
+
+.action-button,
+.panel-button {
+  position: relative;
+}
+
+/* sticker */
+
+.doc-sticker {
+  width: 20em;
+  height: 6em;
+  background: lightblue;
+  left: 50%;
+  margin-left: -10em;
+  top: 5em;
+}
+.item-button {
+  display:inline-block;
+}

@@ -1,0 +1,25 @@
+/* Sizes */
+$post-default-width: 576px;
+$post-default-old-width: 500px;
+
+/* Colors */
+$electric-red: rgb(230,15,0);
+$bloody-red:   rgb(192,15,0);
+
+$default-text-color:  rgb(71,71,71);
+$default-links-color: $bloody-red;
+$default-light-color: rgb(152,152,152);
+
+$primary-button-background:           rgb(172,15,0);
+$primary-button-background-highlight: $electric-red;
+$primary-button-border:               darken($electric-red,12%);
+
+$follow-color:   rgb(51,128,43);
+$repost-color:   rgb(43,182,115);
+$favorite-color: rgb(250,167,50);
+$comment-color:  rgb(102,153,204);
+
+/* Mobile Colors */
+$m-touch:        rgba(215,29,37,.15);
+$m-border:       rgba(0,0,0,.1);
+$m-background:   rgb(229,233,235);

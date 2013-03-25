@@ -1,0 +1,474 @@
+@import "mixins";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code, time,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  @include box-sizing(border-box);
+  @include background-origin(padding-box);
+}
+
+.container{
+  position: relative;
+  top:0;
+  left:0;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  
+  font: 62.5%/1.4 'Helvetica Neue', helvetica, arial, sans-serif;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  
+  @include transform(translateZ(0));
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: " ";
+  font-size: 0;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  
+  @include transition(opacity .15s linear);
+}
+/* utilities */
+
+.hidden,
+.is-hidden {
+  display: none !important;
+}
+
+.is-invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-visible {
+  @include transition(opacity 0.16s ease-in);
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.no-transition {
+  @include transition(none !important);
+}
+
+.no-select {
+  @include user-select(none);
+}
+
+/* .index
+
+   Defines styles for lists of inline-blocks like buttons, thumbs or toolbars,
+   as well as lists with dividers. Horizontal by default. */
+
+.index {
+  margin: 0;
+  padding: 0;
+  /* Remove default styling from list items. */
+  list-style: none;
+}
+
+.index > li {
+  position: relative;
+  /* Specifically remove default margin and padding from
+     list items in case some typography rules have added
+     these back in after the reset. */
+  margin: 0;
+  padding: 0;
+  /* Make list items act as position parents. */
+}
+
+
+/* .index classes with horizontal layout.
+
+   Simulate a bunch of blocks pushed against each other horizontally
+   by using inline-block layout to create a horizontal effect. Because
+   they're in the flow, children must have no space between them in
+   the html.
+*/
+
+.horizontal {
+  /* To form grids with a horizontal index, line-height
+     needs to be smaller than the items in the index. */
+  line-height: 0;
+}
+
+.horizontal > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.horizontal > *:last-child {
+    margin-right: 0;
+}
+
+.horizontal > *.last {
+    margin-right: 0;
+}
+
+
+.horizontal > input[type='radio'],
+.horizontal > input[type='checkbox'] {
+    margin-top: 0.25em;
+    width: auto;
+    /* Percentage heights on checkboxes can make them dissapear. */
+    height: auto;
+}
+
+.horizontal.index > dt,
+.horizontal.index > dd {
+    margin: 0;
+}
+.horizontal.index > dt,
+.horizontal.index > dd {
+    width: 160px;
+    line-height: 1.6em;
+}
+.horizontal.index > dt {
+    vertical-align: text-bottom;
+}
+.horizontal.index > dd {
+    margin-top: 1.6667em;
+    /* Move it left with a negative margin accounting for size, padding and margin of dt */
+    margin-bottom: 1.6667em;
+    margin-left: 0;
+    /* Move it down by one line-height */
+    margin-left: -166px;
+    /* Space at the bottom for when the items wrap */
+    vertical-align: text-top;
+    /* reset the margin that usually indents a dd */
+}
+
+.horizontal.spaced {
+  > li:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  > li.pull-right {
+    margin-right: 0;
+
+    + li.pull-right {
+      margin-right: 16px;
+    }
+  }
+}
+
+
+/* .vertical */
+
+.vertical > * {
+  display: block;
+}
+
+.vertical > *:last-child {
+  margin-bottom: 0;
+}
+
+.vertical > *.last {
+  margin-bottom: 0;
+}
+
+.vertical > dt,
+.vertical > dd {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.vertical > dt {
+  margin-right: 2%;
+  width: 36.20%;
+  text-align: right;
+  /* The golden ratio */
+}
+
+.vertical > dd {
+  margin-right: 0;
+  /* The golden ratio */
+  width: 61.80%;
+}
+
+.vertical.spaced {
+  li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+
+/* spaced children */
+
+.horizontal > .spaced {
+  margin: 0 1.3333em;
+}
+
+.vertical > .spaced {
+  margin: 1.3333em 0;
+}
+
+/* Putting objects of unknown width/height in the centre */
+
+.central {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  display: box;
+
+  /* FF shrinks the width of boxes with display: box; */
+  width: 100%;
+
+  -webkit-box-align: center;
+  -moz-box-align:    center;
+  -o-box-align:      center;
+  box-align:         center;
+
+  -webkit-box-pack: center;
+  -moz-box-pack:    center;
+  -o-box-pack:      center;
+  box-pack:         center;
+}
+
+/* Links as buttons, thumbnails,  classes */
+
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}
+
+.button {
+  
+  @include background-clip(padding-box);
+  @include background-origin(padding-box);
+  display: inline-block;
+
+  overflow: hidden;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+
+  height: 2em;
+  border-width: 0;
+  background-repeat: no-repeat;
+
+  color: rgb(96,96,96);
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2em;
+
+  cursor: pointer;
+}
+
+.button.loading,
+.button.disabled {
+  opacity: 0.6;
+}
+
+.button input {
+  display: inline;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  height: auto;
+  vertical-align: baseline;
+}
+
+.menu-button,
+.tab-button {
+
+  @include border-radius(0);
+  @include box-shadow(none);
+  padding-right: 0.8333em;
+
+  /* Remove default border and shadow */
+  padding-left: 0.8333em;
+  width: 100%;
+}
+
+.menu-button {
+  text-align: left;
+}
+
+/* .thumb */
+
+.thumb {
+
+  @include background-size(100% auto);
+  display: inline-block;
+  overflow: hidden;
+
+  /* Hide overflowing text. This technique is better
+     than using -ve text-indent because IE7 moves
+     the background image with the text-indent. */
+  padding-top: 64px;
+  width: 64px;
+  height: 0;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  color: inherit;
+  vertical-align: baseline;
+
+  text-decoration: none;
+}
+
+.zoom-thumb {
+  @include border-radius(12px);
+  display: none;
+  padding-top: 24px;
+  width: 24px;
+  background-image: url(image-path('buttons-site.png'));
+
+  background-position: 50% -5840px;
+  cursor:pointer;
+}
+
+.zoom-thumb:hover {
+  background-position: 50% -5878px;
+}
+
+.thumb > .zoom-thumb {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+}
+
+.thumb:hover > .zoom-thumb {
+  display: block;
+}
+
+.banner-thumb {
+  display: block;
+  width: auto;
+}
+
+.text-thumb,
+.text-thumbs .thumb {
+  /* Make the text show below the thumb. Text appears
+     outside of the box - ie, it overflows - so that
+     we dont see any more of the image than necessary. */
+  overflow: visible;
+  margin-bottom: 1em;
+  color: rgb(100,100,100);
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
+
+  font-size: 0.9167em;
+  line-height: 2.3333em;
+}
+
+.text-thumb>span {
+  display: block;
+  /* We can't use text-overflow because overflow is
+     visible, so if you want to truncate the text you
+     need to put a span inside the thumb. */
+  overflow: hidden;
+  text-align: center;
+  -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+  white-space: nowrap;
+   -o-text-overflow: ellipsis;
+}
+
+/* Positioning */
+
+.tl, .tr, .bl, .br { position: absolute; }
+.tl, .tr { top: 0; }
+.bl, .br { bottom: 0; }
+.tl, .bl { left: 0; }
+.tr, .br { right: 0; }
+
+/* scroll */
+scroll {
+  overflow: auto;
+  /* Enable momentum scrolling. Unfortunately this is buggy. It doesn't
+     update the custom scrollbar during the momentum ease-out. Also, some
+     children get rendered improperly. Don't use. */
+  /* -webkit-overflow-scrolling: touch; */
+}
+
+.scroll::-webkit-scrollbar {
+  @include border-radius(12px);
+  width: 9px;
+  height: 9px;
+  background-color: transparent;
+  /* Force scrollbars to display in mobile WebKit devices. For a demo
+     of scrollbar configurations:
+     http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html
+  */
+}
+
+.scroll::-webkit-scrollbar-thumb:vertical,
+.scroll::-webkit-scrollbar-thumb:horizontal {
+  @include border-radius(12px);
+  border: 2px solid white;
+  /* Approximate the style of the iPad's default scrollbars. (Can
+     probably do better, but this is quick). */
+  background-color: #888888;
+}
+
+.scroll::-webkit-scrollbar-thumb:vertical {
+  min-height: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:horizontal {
+  min-width: 20px;
+}
+
+.scroll::-webkit-scrollbar-track-piece:disabled,
+.scroll::-webkit-scrollbar-button:disabled {
+  display: none !important;
+}
+
+.x-scroll {
+  overflow-y: hidden;
+}
+
+.y-scroll {
+  overflow-x: hidden;
+}
+
+.x-scroll.y-scroll {
+  overflow: scroll;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Icons */
+
+.spaced-right::before {
+  margin-right: 0.5em;
+}
+
+.spaced-left::before {
+  margin-left: 0.5em;
+}

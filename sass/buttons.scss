@@ -1,0 +1,397 @@
+/* Required SASS mixins */
+@import "mixins";
+@import "variables";
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+[role="button"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+.button {
+  padding-right: 9px;
+  padding-left: 9px;
+  color: rgb(128,128,128);
+  vertical-align: top;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $default-text-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  display: inline-block;
+}
+
+.button-group {
+  white-space: nowrap;
+
+  .button {
+    border-radius: 0;
+
+    ~ .button {
+      border-left-width: 0;
+    }
+
+    &:first-of-type,
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    &:last-of-type,
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}
+
+.dropdown-button {
+  padding-top: 15px;
+  width: 15px;
+  height: 0;
+}
+
+
+.circle-button {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  background-color: $default-text-color;
+
+  color: white;
+  font-size: 24px;
+  line-height: 70px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgb(51,51,51);
+    color: white;
+  }
+}
+
+
+.dark-button {
+
+  @include linear-gradient(rgb(77,77,77), rgb(51,51,51));
+
+  @include box-shadow(0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset);
+  outline: none;
+  border: 1px solid rgb(25,25,25);
+  background-position: 0 0;
+  color: rgb(230,230,230);
+  text-shadow: 0 1px 0 black;
+
+  &:hover,
+  &:focus {
+    @include linear-gradient(rgb(102,102,102), rgb(77,77,77));
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    @include linear-gradient(rgb(26,26,26), rgb(51,51,51));
+    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+    color: white;
+    text-shadow: none;
+  }
+}
+
+.default-button {
+
+  @include linear-gradient(rgb(251,251,251), rgb(221,221,221));
+
+  @include box-shadow(0 1px 0 rgb(255,255,255) inset, 0 1px 3px rgba(0,0,0,.12));
+  outline: none;
+  border: 1px solid rgb(213,213,213);
+  border-bottom-color: rgb(190,190,190);
+  background-position: 0 0;
+  color: rgb(128,128,128);
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(251,251,251);
+    color: rgb(102,102,102);
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active,
+  input:checked + & {
+    @include linear-gradient(rgb(220,220,220), rgb(220,220,220));
+    @include box-shadow(0 0 1px rgba(0,0,0,.25) inset, 0 1px 1px rgba(255,255,255,.25));
+    border-color: rgb(204,204,204);
+    color: rgb(102,102,102);
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+
+  .button-group & {
+    @include box-shadow(0 1px 0 rgb(255,255,255) inset);
+  }
+}
+
+.success-button {
+
+  @include linear-gradient(rgb(142,221,79), rgb(108,188,67));
+
+  @include box-shadow(1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.1) inset);
+  outline: none;
+  border: 1px solid rgb(90,185,0);
+  background-position: 0 0;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+
+  &:hover,
+  &:focus {
+    @include linear-gradient(rgb(174,231,123), rgb(108,188,67));
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    @include linear-gradient(rgb(108,188,67), rgb(142,221,79));
+    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+    color: white;
+  }
+}
+
+.primary-button {
+
+  @include linear-gradient($primary-button-background-highlight, $primary-button-background, $primary-button-background-highlight);
+
+  @include box-shadow(0 1px 0 rgba(255,255,255,.3) inset);
+  outline: none;
+  border: 1px solid $primary-button-border;
+  background-position: 0 0;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+
+  &:hover,
+  &:focus {
+    @include linear-gradient(lighten($primary-button-background-highlight,15%), $primary-button-background, lighten($primary-button-background-highlight,15%));
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(0 0 1px rgba(0,0,0,.25) inset);
+    background: $primary-button-background;
+    color: darken($primary-button-border, 20%);
+    text-shadow: 0 1px 0 rgba(255,255,255,.25);
+  }
+}
+
+.button.red-button {
+  color: $bloody-red;
+
+  &:hover,
+  &:focus {
+    border-color: $bloody-red;
+    background: rgba(193,39,45,.1);
+    color: $bloody-red;
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  &:focus {
+    @include box-shadow(0 0 6px $electric-red);
+  }
+}
+
+
+/* Sizes of the button */
+.giant-button {
+  padding-right: 18px;
+  padding-left: 18px;
+  height: 2.9em;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 2.1em;
+  line-height: 2.8em;
+  cursor: pointer;
+}
+
+.huge-button {
+  padding-right: 14px;
+  padding-left: 14px;
+  height: 2.4em;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 2.2em;
+  cursor: pointer;
+}
+
+.large-button {
+  position: relative;
+  padding-right: 12px;
+  padding-left: 12px;
+  height: 2.3em;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.6em;
+  line-height: 2.3em;
+  cursor: pointer;
+
+  &.next-button,
+  &.previous-button {
+    position: relative;
+    overflow: visible;
+
+    &::after {
+      @include box-sizing(border-box);
+      @include transform(rotate(45deg));
+
+      position: absolute;
+      top: 2px;
+      z-index: -1;
+      display: block;
+      width: 26px;
+      height: 26px;
+
+      border-radius: 5px;
+      content: '';
+    }
+  }
+
+  &.next-button {
+    margin-right: 1em;
+    padding-right: 6px;
+    border-right-width: 0;
+    border-radius: 3px 0 0 3px;
+
+    &::after {
+      right: -12px;
+    }
+  }
+
+  &.previous-button {
+    margin-left: 1em;
+    padding-left: 6px;
+    border-left-width: 0;
+    border-radius: 0 3px 3px 0;
+
+    &::after {
+      left: -12px;
+    }
+  }
+}
+
+.medium-button {
+  height: 2.4em;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 2.2em;
+  cursor: pointer;
+}
+
+.small-button {
+  padding-right: 6px;
+  padding-left: 6px;
+  height: 2.2em;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+
+/* NEW POST */
+
+.urturn-button {
+  position: relative;
+
+  &::before {
+    vertical-align: middle;
+    font-size: 1.25em;
+  }
+}
+
+
+
+/* Buttons with Icons */
+
+.close-button {
+
+  position: absolute;
+  top: -0.75em;
+  right: -0.75em;
+  z-index: 5;
+  padding: 0 0 0 22px;
+  width: 22px;
+  height: 22px;
+
+  background-position: 50% -3148px;
+
+  color: $default-light-color;
+
+  &.icon-delete {
+
+    top: 12px;
+    right: 12px;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+
+    background: none;
+
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  &:hover,
+  &:active {
+    color: $default-text-color;
+  }
+
+  &.round {
+    @include box-shadow(0 1px 0 rgba(255,255,255,.25) inset);
+    padding-top: 20px;
+    border: 1px solid black;
+    border-radius: 22px;
+    background-color: rgb(51,51,51);
+    background-position: 50% -1170px;
+  }
+}
+
+a.cancel-button,
+a.delete-button {
+  color: $bloody-red;
+  text-decoration: none;
+  font-weight: normal;
+
+  &:hover,
+  &:focus {
+    color: $bloody-red;
+    text-decoration: underline;
+  }
+}
