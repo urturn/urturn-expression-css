@@ -1,16 +1,4 @@
-$experimental-support-for-khtml:false;
-@import "compass/css3/background-size";
-@import "compass/css3/background-origin";
-@import "compass/css3/background-clip";
-@import "compass/css3/border-radius";
-@import "compass/css3/box";
-@import "compass/css3/box-shadow";
-@import "compass/css3/box-sizing";
-@import "compass/css3/columns";
-@import "compass/css3/images";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
-@import "compass/css3/text-shadow";
+@import "compass/css3";
 @import "compass/css3/user-interface";
 
 @mixin linear-gradient($top_color, $bottom_color, $fallback: $top_color) {
