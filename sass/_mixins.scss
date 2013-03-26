@@ -22,16 +22,6 @@ $experimental-support-for-khtml:false;
   background-image:                                 linear-gradient(to bottom, $top_color,    $bottom_color);
 }
 
-@mixin linear-gradient-with-image($top_color, $bottom_color, $fallback: $top_color, $image: 'buttons_site.png') {
-  background-color: $fallback;
-  background-image: url(image-path($image)), url(image-path('gradient_fallback.png'));
-  background-image: url(image-path($image)), -webkit-gradient(linear, left top, left bottom, from($top_color),      to($bottom_color));
-  background-image: url(image-path($image)),                         -webkit-linear-gradient(top, $top_color,          $bottom_color);
-  background-image: url(image-path($image)),                            -moz-linear-gradient(top, $top_color,          $bottom_color);
-  background-image: url(image-path($image)),                              -o-linear-gradient(top, $top_color,          $bottom_color);
-  background-image: url(image-path($image)),                                 linear-gradient(to bottom, $top_color,    $bottom_color);
-}
-
 
 @mixin image-set($sd, $hd) {
   background-image: url($sd);
