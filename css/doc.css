@@ -29,3 +29,12 @@
 .item-button {
   display: inline-block;
 }
+
+.box1 {
+  font-size: 16px;
+  display: inline-block;
+  width: 15em;
+  padding: .25em .5em;
+  background: #eee;
+  margin: .5em 1em .5em 0;
+}
