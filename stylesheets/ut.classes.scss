@@ -338,30 +338,6 @@ hgroup, nav, section {
   text-decoration: none;
 }
 
-.zoom-thumb {
-  @include border-radius(12px);
-  display: none;
-  padding-top: 24px;
-  width: 24px;
-  background-image: url(image-path('buttons-site.png'));
-
-  background-position: 50% -5840px;
-  cursor:pointer;
-}
-
-.zoom-thumb:hover {
-  background-position: 50% -5878px;
-}
-
-.thumb > .zoom-thumb {
-  position: absolute;
-  right: -5px;
-  bottom: -5px;
-}
-
-.thumb:hover > .zoom-thumb {
-  display: block;
-}
 
 .banner-thumb {
   display: block;
