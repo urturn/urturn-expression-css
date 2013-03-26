@@ -1,0 +1,154 @@
+@import "mixins";
+
+.action-button {
+	z-index: 20;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+	color: white;
+	
+	&:hover {
+    color: white;
+		background-color: rgb(0, 0, 0);
+	}
+}
+
+.action-button-wrap {
+  .button {
+    margin-right: 0.3em;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.item-button {
+  @include linear-gradient(rgb(50,50,50),rgb(30,30,30));
+	position: absolute;
+  z-index: 10000;
+  display: none;
+  padding: 0;
+  
+  width: 3.6em;
+  height: 3.6em;
+  border-radius: 50%;
+  @include box-shadow(0 .4em .8em rgba(0, 0, 0, 0.8));
+
+  color: rgb(240,240,240);
+  font-size: 1em;
+  line-height: 2em;
+  
+  &:hover,
+  &:active {
+    @include linear-gradient(rgb(30,30,30),rgb(50,50,50));
+    color: white;
+  }
+
+  &::before {
+    font-size: 2em;
+    vertical-align:middle;
+    position: absolute;
+    top: 50%;
+    width:100%;
+    margin-top: -0.5em;
+    left: 0;
+  }
+  // top / right
+  &.ne {
+  	top: -2.1em;
+  	right: -2.1em;
+  }
+
+  // top / left
+   &.nw {
+  	top: -2.1em;
+  	left: -2.1em;
+    
+    &:nth-child(2) {
+      top: -2.1em;
+      left: 2.1em;
+    }
+  }
+
+  // bottom / right
+   &.se {
+  	bottom: -2.1em;
+  	right: -2.1em;
+  }
+
+	// bottom / left
+   &.sw {
+  	bottom: -2.1em;
+  	left: -2.1em;
+  }
+}
+
+.touch .item-button {
+  
+  border: 1px solid white;
+  width: 4.6em;
+  height: 4.6em;
+  
+  // top / right
+  &.ne {
+    top: -3.1em;
+    right: -3.1em;
+  }
+
+  // top / left
+   &.nw {
+    top: -3.1em;
+    left: -3.1em;
+    
+    &:nth-child(2) {
+      top: -3.1em;
+      left: 2.1em;
+    }
+  }
+
+  // bottom / right
+   &.se {
+    bottom: -3.1em;
+    right: -3.1em;
+  }
+
+  // bottom / left
+   &.sw {
+    bottom: -3.1em;
+    left: -3.1em;
+  }
+}
+
+.panel-button {
+  position: absolute;
+  @include box-shadow(0 0 0 1px #b4b4b4 inset);
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  @include linear-gradient(rgb(254,254,254),rgb(223,223,223));
+  @include text-shadow(0 1px 1px rgba(255,255,255,0.5));
+  
+  height: 2.3em;
+  width: 2.3em;
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 2.5em;
+  
+  &:hover,
+  &:active {
+      @include linear-gradient(rgb(223,223,223),rgb(254,254,254));
+  }
+  &.yep {
+    color: #90c541;
+  } 
+
+  &.nope {
+    color: #be1d25;
+  } 
+}
+
+.sticker {
+  position: absolute;
+  border: .2em solid transparent;
+  box-shadow: none;
+  @include box-sizing(content-box);
+}
