@@ -1,8 +1,12 @@
 /* Style for the doc page */
-.container {
-  margin: 3em;
-  width: 90%;
+body {
+  margin: 48px;
+
+  font: 100% 'Helvetica Neue', Helvetica, arial, sans-serif;
+  color: rgb(102,102,102);
+  background: url(../images/bg.png) repeat;
 }
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -36,4 +40,83 @@
   padding: .25em .5em;
   background: #eee;
   margin: .5em 1em .5em 0;
+}
+.site_wrap {
+  width: 860px;
+  margin: 0 auto;
+
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.25), 0 -1px 0 rgba(0,0,0,.075);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.25), 0 -1px 0 rgba(0,0,0,.075);
+       -o-box-shadow: 0 1px 2px rgba(0,0,0,.25), 0 -1px 0 rgba(0,0,0,.075);
+          box-shadow: 0 1px 2px rgba(0,0,0,.25), 0 -1px 0 rgba(0,0,0,.075);
+}
+
+header {
+  text-align: center;
+  padding: 24px 32px 20px;
+  background-color: #C11A21;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #D71D25), color-stop(100%, #AA171D));
+  background-image: -webkit-linear-gradient(#D71D25, #AA171D);
+  background-image: -moz-linear-gradient(#D71D25, #AA171D);
+  background-image: -o-linear-gradient(#D71D25, #AA171D);
+  background-image: linear-gradient(#D71D25, #AA171D);
+  border-radius: 15px 15px 0 0;
+}
+  header h1 {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  }
+
+article {
+  position: relative;
+  padding: 32px;
+}
+
+article.odd {
+  background-color: rgb(235,235,235);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(245,245,245)), to(rgb(235,235,235)));
+  background-image: -webkit-linear-gradient(top, rgb(245,245,245), rgb(235,235,235));
+  background-image: -moz-linear-gradient(top, rgb(245,245,245), rgb(235,235,235));
+  background-image: -o-linear-gradient(top, rgb(245,245,245), rgb(235,235,235));
+  background-image: linear-gradient(to bottom, rgb(245,245,245), rgb(235,235,235));
+}
+
+article.odd:last-child {
+  padding: 24px 32px 20px;
+  border-radius: 0 0 15px 15px;
+}
+
+article + article {
+  border-top: 1px solid rgb(220,220,220);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:  'Helvetica Neue', helvetica, arial, sans-serif;
+  font-weight: normal;
+  color: rgb(71,71,71);
+  margin: 0;
+}
+
+h1 { font-size: 2.25em;       line-height: 1.1667em;  margin-bottom: 0;         letter-spacing: -1px; }
+h2 { font-size: 2em;       line-height: 1.333em;   margin-bottom: 0;  letter-spacing: -1px; }
+h3 { margin-bottom: .5em; margin-top: .5em;}
+
+article.odd p {
+  font-size: 2em;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  color: rgb(192,15,0);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: rgb(230,15,0);
+  text-decoration: underline;
 }
