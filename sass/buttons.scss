@@ -88,6 +88,29 @@ input[type="submit"],
   }
 }
 
+.qatar_button {
+  color: $tip-text;
+
+  background: $tip-border;
+  border: 1px solid $tip-icon;
+  outline: none;
+
+  @include box-shadow(0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset);
+
+  &:hover,
+  &:focus {
+    color: $tip-text;
+    @include linear-gradient(lighten($tip-border,10%), $tip-border);
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    color: $tip-text;
+    background: darken($tip-border,10%);
+    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+  }
+}
 
 .dark-button {
 
