@@ -1,6 +1,8 @@
 @import "compass/css3";
 @import "compass/css3/user-interface";
 
+$experimental-support-for-svg: true;
+
 @mixin linear-gradient($top_color, $bottom_color, $fallback: $top_color) {
   background-color: $fallback;
   background-image: -webkit-gradient(linear, left top, left bottom, from($top_color),      to($bottom_color));

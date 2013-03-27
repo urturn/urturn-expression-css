@@ -163,7 +163,7 @@ select {
   background-color: white;
 
   &:focus {
-    @include box-shadow(0 0 5px rgb(152,152,152));
+    box-shadow: 0 0 5px rgb(152,152,152);
     outline: none;
     border-color: rgb(128,128,128);
     color: $default-text-color;
@@ -265,7 +265,7 @@ textarea:focus:invalid,
   border-color: $bloody-red !important;
 
   &:focus {
-    @include box-shadow(0 0 5px rgba(193,39,45,.75));
+    box-shadow: 0 0 5px rgba(193,39,45,.75);
   }
 }
 
@@ -389,7 +389,7 @@ textarea.with-counter {
   }
 
   .switch {
-    @include box-shadow(0 0 3px rgba(0,0,0,.25) inset);
+    box-shadow: 0 0 3px rgba(0,0,0,.25) inset;
     position: relative;
     display: inline-block;
     margin-top: -3px;
@@ -429,7 +429,7 @@ textarea.with-counter {
     .bullet {
 
       @include linear-gradient(rgb(240,240,240), rgb(230,230,230));
-      @include box-shadow(0 1px 0 white inset, 0 1px 1px rgba(0,0,0,.25));
+      box-shadow: 0 1px 0 white inset, 0 1px 1px rgba(0,0,0,.25);
       @include transition(left .1s linear);
       position: relative;
       top: -2px;
@@ -442,7 +442,7 @@ textarea.with-counter {
 
       &::before,
       &::after {
-        @include box-shadow(1px 0 0 white, 1px 0 0 white inset);
+        box-shadow: 1px 0 0 white, 1px 0 0 white inset;
 
         position: absolute;
         top: 5px;

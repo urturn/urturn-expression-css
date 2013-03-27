@@ -95,7 +95,7 @@ input[type="submit"],
   border: 1px solid $tip-icon;
   outline: none;
 
-  @include box-shadow(0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset);
+  box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset;
 
   &:hover,
   &:focus {
@@ -108,7 +108,7 @@ input[type="submit"],
   &.active {
     color: $tip-text;
     background: darken($tip-border,10%);
-    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+    box-shadow: 0 0 1px rgba(0,0,0,.15) inset;
   }
 }
 
@@ -116,7 +116,7 @@ input[type="submit"],
 
   @include linear-gradient(rgb(77,77,77), rgb(51,51,51));
 
-  @include box-shadow(0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset);
+  box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset;
   outline: none;
   border: 1px solid rgb(25,25,25);
   background-position: 0 0;
@@ -133,7 +133,7 @@ input[type="submit"],
   &:active,
   &.active {
     @include linear-gradient(rgb(26,26,26), rgb(51,51,51));
-    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+    box-shadow: 0 0 1px rgba(0,0,0,.15) inset;
     color: white;
     text-shadow: none;
   }
@@ -143,7 +143,7 @@ input[type="submit"],
 
   @include linear-gradient(rgb(251,251,251), rgb(221,221,221));
 
-  @include box-shadow(0 1px 0 rgb(255,255,255) inset, 0 1px 3px rgba(0,0,0,.12));
+  box-shadow: 0 1px 0 rgb(255,255,255) inset, 0 1px 3px rgba(0,0,0,.12);
   outline: none;
   border: 1px solid rgb(213,213,213);
   border-bottom-color: rgb(190,190,190);
@@ -162,14 +162,14 @@ input[type="submit"],
   &.active,
   input:checked + & {
     @include linear-gradient(rgb(220,220,220), rgb(220,220,220));
-    @include box-shadow(0 0 1px rgba(0,0,0,.25) inset, 0 1px 1px rgba(255,255,255,.25));
+    box-shadow: 0 0 1px rgba(0,0,0,.25) inset, 0 1px 1px rgba(255,255,255,.25);
     border-color: rgb(204,204,204);
     color: rgb(102,102,102);
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
   }
 
   .button-group & {
-    @include box-shadow(0 1px 0 rgb(255,255,255) inset);
+    box-shadow: 0 1px 0 rgb(255,255,255) inset;
   }
 }
 
@@ -177,7 +177,7 @@ input[type="submit"],
 
   @include linear-gradient(rgb(142,221,79), rgb(108,188,67));
 
-  @include box-shadow(1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.1) inset);
+  box-shadow: 1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.1) inset;
   outline: none;
   border: 1px solid rgb(90,185,0);
   background-position: 0 0;
@@ -194,7 +194,7 @@ input[type="submit"],
   &:active,
   &.active {
     @include linear-gradient(rgb(108,188,67), rgb(142,221,79));
-    @include box-shadow(0 0 1px rgba(0,0,0,.15) inset);
+    box-shadow: 0 0 1px rgba(0,0,0,.15) inset;
     color: white;
   }
 }
@@ -203,7 +203,7 @@ input[type="submit"],
 
   @include linear-gradient($primary-button-background-highlight, $primary-button-background, $primary-button-background-highlight);
 
-  @include box-shadow(0 1px 0 rgba(255,255,255,.3) inset);
+  box-shadow: 0 1px 0 rgba(255,255,255,.3) inset;
   outline: none;
   border: 1px solid $primary-button-border;
   background-position: 0 0;
@@ -219,7 +219,7 @@ input[type="submit"],
 
   &:active,
   &.active {
-    @include box-shadow(0 0 1px rgba(0,0,0,.25) inset);
+    box-shadow: 0 0 1px rgba(0,0,0,.25) inset;
     background: $primary-button-background;
     color: darken($primary-button-border, 20%);
     text-shadow: 0 1px 0 rgba(255,255,255,.25);
@@ -239,7 +239,7 @@ input[type="submit"],
   }
 
   &:focus {
-    @include box-shadow(0 0 6px $electric-red);
+    box-shadow: 0 6px $electric-red;
   }
 }
 
@@ -398,7 +398,7 @@ input[type="submit"],
   }
 
   &.round {
-    @include box-shadow(0 1px 0 rgba(255,255,255,.25) inset);
+    box-shadow: 0 1px 0 rgba(255,255,255,.25) inset;
     padding-top: 20px;
     border: 1px solid black;
     border-radius: 22px;

@@ -327,7 +327,7 @@ hgroup, nav, section {
 }
 
 .scroll::-webkit-scrollbar {
-  @include border-radius(12px);
+  border-radius: 12px;
   width: 9px;
   height: 9px;
   background-color: transparent;
@@ -335,7 +335,7 @@ hgroup, nav, section {
 
 .scroll::-webkit-scrollbar-thumb:vertical,
 .scroll::-webkit-scrollbar-thumb:horizontal {
-  @include border-radius(12px);
+  border-radius: 12px;
   border: 2px solid white;
   background-color: #888888;
 }
