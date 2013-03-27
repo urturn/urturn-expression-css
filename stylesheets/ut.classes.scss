@@ -113,8 +113,6 @@ hgroup, nav, section {
 */
 
 .horizontal {
-  /* To form grids with a horizontal index, line-height
-     needs to be smaller than the items in the index. */
   line-height: 0;
 }
 
@@ -136,7 +134,6 @@ hgroup, nav, section {
 .horizontal > input[type='checkbox'] {
     margin-top: 0.25em;
     width: auto;
-    /* Percentage heights on checkboxes can make them dissapear. */
     height: auto;
 }
 
@@ -154,14 +151,10 @@ hgroup, nav, section {
 }
 .horizontal.index > dd {
     margin-top: 1.6667em;
-    /* Move it left with a negative margin accounting for size, padding and margin of dt */
     margin-bottom: 1.6667em;
     margin-left: 0;
-    /* Move it down by one line-height */
     margin-left: -166px;
-    /* Space at the bottom for when the items wrap */
     vertical-align: text-top;
-    /* reset the margin that usually indents a dd */
 }
 
 .horizontal.spaced {
@@ -299,22 +292,6 @@ hgroup, nav, section {
   vertical-align: baseline;
 }
 
-.menu-button,
-.tab-button {
-
-  @include border-radius(0);
-  @include box-shadow(none);
-  padding-right: 0.8333em;
-
-  /* Remove default border and shadow */
-  padding-left: 0.8333em;
-  width: 100%;
-}
-
-.menu-button {
-  text-align: left;
-}
-
 /* .thumb */
 
 .thumb {
@@ -323,9 +300,6 @@ hgroup, nav, section {
   display: inline-block;
   overflow: hidden;
 
-  /* Hide overflowing text. This technique is better
-     than using -ve text-indent because IE7 moves
-     the background image with the text-indent. */
   padding-top: 64px;
   width: 64px;
   height: 0;
@@ -338,41 +312,6 @@ hgroup, nav, section {
   text-decoration: none;
 }
 
-
-.banner-thumb {
-  display: block;
-  width: auto;
-}
-
-.text-thumb,
-.text-thumbs .thumb {
-  /* Make the text show below the thumb. Text appears
-     outside of the box - ie, it overflows - so that
-     we dont see any more of the image than necessary. */
-  overflow: visible;
-  margin-bottom: 1em;
-  color: rgb(100,100,100);
-  text-align: center;
-  white-space: nowrap;
-  font-weight: bold;
-
-  font-size: 0.9167em;
-  line-height: 2.3333em;
-}
-
-.text-thumb>span {
-  display: block;
-  /* We can't use text-overflow because overflow is
-     visible, so if you want to truncate the text you
-     need to put a span inside the thumb. */
-  overflow: hidden;
-  text-align: center;
-  -ms-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-  white-space: nowrap;
-   -o-text-overflow: ellipsis;
-}
-
 /* Positioning */
 
 .tl, .tr, .bl, .br { position: absolute; }
@@ -382,12 +321,9 @@ hgroup, nav, section {
 .tr, .br { right: 0; }
 
 /* scroll */
-scroll {
+.scroll {
   overflow: auto;
-  /* Enable momentum scrolling. Unfortunately this is buggy. It doesn't
-     update the custom scrollbar during the momentum ease-out. Also, some
-     children get rendered improperly. Don't use. */
-  /* -webkit-overflow-scrolling: touch; */
+  webkit-overflow-scrolling: touch;
 }
 
 .scroll::-webkit-scrollbar {
@@ -395,18 +331,12 @@ scroll {
   width: 9px;
   height: 9px;
   background-color: transparent;
-  /* Force scrollbars to display in mobile WebKit devices. For a demo
-     of scrollbar configurations:
-     http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html
-  */
 }
 
 .scroll::-webkit-scrollbar-thumb:vertical,
 .scroll::-webkit-scrollbar-thumb:horizontal {
   @include border-radius(12px);
   border: 2px solid white;
-  /* Approximate the style of the iPad's default scrollbars. (Can
-     probably do better, but this is quick). */
   background-color: #888888;
 }
 
