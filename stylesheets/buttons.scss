@@ -392,7 +392,8 @@ input[type="submit"],
   }
 
   &:hover,
-  &:active {
+  &:active,
+  &.active {
     color: $default-text-color;
   }
 
