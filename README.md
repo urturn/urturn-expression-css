@@ -3,6 +3,8 @@ urturn-expression-css
 
 Base CSS for Urturn expressions
 
+http://expressions.urturn.com/expression/lib/urturn-expression-css/0.0.1/style.css
+
 Credits
 -------
 
