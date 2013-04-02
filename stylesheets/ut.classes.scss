@@ -31,6 +31,14 @@ hgroup, nav, section {
   -webkit-font-smoothing: antialiased;
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+  /* Get rid of persistent placeholders in webkit, where the placeholder
+     hangs around like an old fart. More here:
+     http://adactio.com/journal/6147/
+  */
+  color: transparent;
+}
+
 .clearfix:after {
   display: block;
   visibility: hidden;
