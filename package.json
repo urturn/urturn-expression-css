@@ -1,0 +1,12 @@
+{
+  "name": "urturn-expression-css",
+  "version": "0.0.1",
+  "description": "Urturn.com expression CSS",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webdoc/urturn-expression-css.git"
+  },
+  "author": "Webdoc",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
