@@ -58,13 +58,13 @@
     left: 0;
   }
   // top / right
-  &.ne {
+  &.tr {
   	top: -2.1em;
   	right: -2.1em;
   }
 
   // top / left
-   &.nw {
+   &.tl {
   	top: -2.1em;
   	left: -2.1em;
     
@@ -75,13 +75,13 @@
   }
 
   // bottom / right
-   &.se {
+   &.br {
   	bottom: -2.1em;
   	right: -2.1em;
   }
 
 	// bottom / left
-   &.sw {
+   &.bl {
   	bottom: -2.1em;
   	left: -2.1em;
   }
@@ -94,13 +94,13 @@
     height: 4.6em;
     
     // top / right
-    &.ne {
+    &.tr {
       top: -3.1em;
       right: -3.1em;
     }
 
     // top / left
-     &.nw {
+     &.tl {
       top: -3.1em;
       left: -3.1em;
       
@@ -111,13 +111,13 @@
     }
 
     // bottom / right
-     &.se {
+     &.br {
       bottom: -3.1em;
       right: -3.1em;
     }
 
     // bottom / left
-     &.sw {
+     &.bl {
       bottom: -3.1em;
       left: -3.1em;
     }
