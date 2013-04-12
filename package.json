@@ -4,7 +4,7 @@
   "description": "Urturn.com expression CSS",
   "repository": {
     "type": "git",
-    "url": "git://github.com/webdoc/urturn-expression-css.git"
+    "url": "git://github.com/urturn/urturn-expression-css.git"
   },
   "author": "Webdoc",
   "license": "MIT",
