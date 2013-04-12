@@ -18,12 +18,20 @@
   <body>
   	<header class="navbar navbar-static-top">
   		<div class="navbar-inner">
-  			<div class="container">
-  				<a class="brand" href="http://urturn.github.io/urturn-expression-api" data-bookmark="home">Urturn Developers</a>
+        <div class="container" id="header_online">
+          <a class="brand" href="http://urturn.github.io/urturn-expression-api" data-bookmark="home">Urturn Developers</a>
+          <ul class="nav">
+            <li><a href="http://urturn.github.io/urturn-expression-api/#!guides/start" data-bookmark="guides/start">Guides</a></li>
+            <li><a href="http://urturn.github.io/urturn-expression-api/#!api" data-bookmark="api">API Reference</a></li>
+            <li class="active"><a href="http://urturn.github.io/urturn-expression-css/">Base CSS</a></li>
+          </ul>
+        </div>
+  			<div class="container" id="header_localhost">
+  				<a class="brand" href="/" data-bookmark="home">Urturn Expression Sandbox</a>
   				<ul class="nav">
-  					<li><a href="http://urturn.github.io/urturn-expression-api/#!guides/start" data-bookmark="guides/start">Guides</a></li>
-  					<li><a href="http://urturn.github.io/urturn-expression-api/#!api" data-bookmark="api">API Reference</a></li>
-  					<li class="active"><a href="http://urturn.github.io/urturn-expression-css/" data-bookmark="api">Base CSS</a></li>
+  					<li><a href="http://webdoc.github.io/urturn-expression-api/">API Reference</a></li>
+            <li><a href="../../filterSandbox.html">Filter Editor</a></li>
+  					<li class="active"><a href="#">Base CSS</a></li>
   				</ul>
   			</div>
   		</div>
@@ -43,5 +51,12 @@
   		</div>
   	</section>
 
+    <script>
+      if (document.location.hostname == 'localhost') {
+        document.getElementById('header_localhost').style.display = 'block';
+      } else {
+        document.getElementById('header_online').style.display = 'block';
+      }
+    </script>
   </body>
   </html>
