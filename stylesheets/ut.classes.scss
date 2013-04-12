@@ -12,7 +12,7 @@ hgroup, nav, section {
   @include background-origin(padding-box);
 }
 
-.container{
+.webdoc_expression_wrapper {
   position: relative;
   top:0;
   left:0;
@@ -400,6 +400,7 @@ hgroup, nav, section {
   line-height: 1.2em;
   margin: 1.6em auto;
   text-align: center;
+  z-index: 21;
 
   span {
     display: block;
@@ -413,38 +414,22 @@ hgroup, nav, section {
     background-color: $electric-red;
     border-radius: 50%;
     -webkit-transform: translateZ(0); // Enable GPU
-    -webkit-animation: fadin .4s infinite alternate;
-       -moz-animation: fadin .4s infinite alternate;
-         -o-animation: fadin .4s infinite alternate;
-            animation: fadin .4s infinite alternate;
+    @include animation(fadin .4s infinite alternate);
 
     &:nth-child(2) {
-      -webkit-animation-delay: 0.1s;
-         -moz-animation-delay: 0.1s;
-          -ms-animation-delay: 0.1s;
-           -o-animation-delay: 0.1s;
-              animation-delay: 0.1s;
+      @include animation-delay(0.1s);
     }
+
     &:nth-child(3) {
-      -webkit-animation-delay: 0.2s;
-         -moz-animation-delay: 0.2s;
-          -ms-animation-delay: 0.2s;
-           -o-animation-delay: 0.2s;
-              animation-delay: 0.2s;
+     @include animation-delay(0.2s);
     }
+
     &:nth-child(4) {
-      -webkit-animation-delay: 0.3s;
-         -moz-animation-delay: 0.3s;
-          -ms-animation-delay: 0.3s;
-           -o-animation-delay: 0.3s;
-              animation-delay: 0.3s;
+      @include animation-delay(0.3s);
     }
+
     &:nth-child(5) {
-      -webkit-animation-delay: 0.4s;
-         -moz-animation-delay: 0.4s;
-          -ms-animation-delay: 0.4s;
-           -o-animation-delay: 0.4s;
-              animation-delay: 0.4s;
+      @include animation-delay(0.4s);
     }
   }
 
