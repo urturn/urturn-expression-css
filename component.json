@@ -1,9 +1,15 @@
 {
   "name": "urturn-expression-css",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "author": "Emmanuel Vuigner for Urturn",
   "homepage": "http://urturn.github.io/urturn-expression-css/",
   "main": "css/style.css",
+  "licenses": [
+    {
+      "type": "AGPL-3",
+      "url": "https://github.com/urturn/urturn-expression-css/blob/master/LICENSE"
+    }
+  ],
   "styles": [
     "css/style.css"
   ],

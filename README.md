@@ -3,7 +3,10 @@ urturn-expression-css
 
 Base CSS for Urturn expressions
 
-http://expressions.urturn.com/expression/lib/urturn-expression-css/0.0.1/style.css
+- style.css: normalize.css + urturn classes + buttons + icons</li>
+- style_edit.css: normalize.css + urturn classes + forms + urturn edit classes + buttons + icons</li>
+- style_play.css: normalize.css + urturn classes + buttons</li>
+- icons.css
 
 Credits
 -------
