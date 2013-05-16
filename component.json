@@ -1,6 +1,6 @@
 {
   "name": "urturn-expression-css",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Emmanuel Vuigner for Urturn",
   "homepage": "http://urturn.github.io/urturn-expression-css/",
   "main": "css/style.css",
@@ -18,7 +18,7 @@
     "url": "https://github.com/urturn/urturn-expression-css.git"
   },
   "dependencies": {
-    "normalize.scss": "~2.1.0"
+    "normalize-css": "~2.1.2"
   },
   "ignore": [
     "**/.*",

@@ -1,6 +1,6 @@
-@import "../components/normalize.scss/normalize";
-@import "ut.classes";
-@import "forms";
-@import "buttons";
-@import "ut.editor.classes";
-@import "icons";
+@import "vendor/normalize-css/normalize.css";
+@import "partials/ut.classes";
+@import "partials/forms";
+@import "partials/buttons";
+@import "partials/ut.editor.classes";
+@import "partials/icons";

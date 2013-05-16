@@ -1,6 +1,5 @@
-/* Required SASS mixins */
-@import "mixins";
-@import "variables";
+@import "../modules/mixins";
+@import "../modules/variables";
 
 button,
 input[type="button"],
@@ -277,49 +276,6 @@ input[type="submit"],
   font-size: 1.6em;
   line-height: 2.3em;
   cursor: pointer;
-
-  &.next-button,
-  &.previous-button {
-    position: relative;
-    overflow: visible;
-
-    &::after {
-      @include box-sizing(border-box);
-      @include transform(rotate(45deg));
-
-      position: absolute;
-      top: 2px;
-      z-index: -1;
-      display: block;
-      width: 26px;
-      height: 26px;
-
-      border-radius: 5px;
-      content: '';
-    }
-  }
-
-  &.next-button {
-    margin-right: 1em;
-    padding-right: 6px;
-    border-right-width: 0;
-    border-radius: 3px 0 0 3px;
-
-    &::after {
-      right: -12px;
-    }
-  }
-
-  &.previous-button {
-    margin-left: 1em;
-    padding-left: 6px;
-    border-left-width: 0;
-    border-radius: 0 3px 3px 0;
-
-    &::after {
-      left: -12px;
-    }
-  }
 }
 
 .medium-button {
@@ -346,20 +302,6 @@ input[type="submit"],
   display: block;
   width: 100%;
 }
-
-
-/* NEW POST */
-
-.urturn-button {
-  position: relative;
-
-  &::before {
-    vertical-align: middle;
-    font-size: 1.25em;
-  }
-}
-
-
 
 /* Buttons with Icons */
 

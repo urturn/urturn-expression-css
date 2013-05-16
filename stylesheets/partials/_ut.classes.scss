@@ -1,5 +1,5 @@
-@import "mixins";
-@import "variables";
+@import "../modules/mixins";
+@import "../modules/variables";
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -393,43 +393,58 @@ hgroup, nav, section {
   margin-left: 0.5em;
 }
 
-/* Loading Dots */
+//* Loading Dots */
 .loading_dots {
-  width: 11em;
-  height: 1.2em;
-  line-height: 1.2em;
-  margin: 1.6em auto;
+  width: 110px;
+  height: 12px;
+  line-height: 12px;
+  margin: 16px auto;
   text-align: center;
-  z-index: 21;
 
   span {
     display: block;
     float: left;
-    width: 1.2em;
-    height: 1.2em;
-    margin: 0 0.5em;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
 
     vertical-align: middle;
 
     background-color: $electric-red;
     border-radius: 50%;
     -webkit-transform: translateZ(0); // Enable GPU
-    @include animation(fadin .4s infinite alternate);
+    -webkit-animation: fadin .4s infinite alternate;
+       -moz-animation: fadin .4s infinite alternate;
+         -o-animation: fadin .4s infinite alternate;
+            animation: fadin .4s infinite alternate;
 
     &:nth-child(2) {
-      @include animation-delay(0.1s);
+      -webkit-animation-delay: 0.1s;
+         -moz-animation-delay: 0.1s;
+          -ms-animation-delay: 0.1s;
+           -o-animation-delay: 0.1s;
+              animation-delay: 0.1s;
     }
-
     &:nth-child(3) {
-     @include animation-delay(0.2s);
+      -webkit-animation-delay: 0.2s;
+         -moz-animation-delay: 0.2s;
+          -ms-animation-delay: 0.2s;
+           -o-animation-delay: 0.2s;
+              animation-delay: 0.2s;
     }
-
     &:nth-child(4) {
-      @include animation-delay(0.3s);
+      -webkit-animation-delay: 0.3s;
+         -moz-animation-delay: 0.3s;
+          -ms-animation-delay: 0.3s;
+           -o-animation-delay: 0.3s;
+              animation-delay: 0.3s;
     }
-
     &:nth-child(5) {
-      @include animation-delay(0.4s);
+      -webkit-animation-delay: 0.4s;
+         -moz-animation-delay: 0.4s;
+          -ms-animation-delay: 0.4s;
+           -o-animation-delay: 0.4s;
+              animation-delay: 0.4s;
     }
   }
 
@@ -438,18 +453,6 @@ hgroup, nav, section {
     left: 0;
     right: 0;
     z-index: 1;
-  }
-
-  &.white_dots span {
-    background-color: white;
-  }
-
-  &.centered {
-    top: 50%;
-    left: 50%;
-    margin-top: -0.6em;
-    margin-left: -5.5em;
-    z-index: 2;
   }
 }
 

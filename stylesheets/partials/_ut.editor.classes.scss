@@ -1,4 +1,5 @@
-@import "mixins";
+@import "../modules/mixins";
+@import "../modules/variables";
 
 .action-button {
 	z-index: 20;

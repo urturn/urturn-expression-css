@@ -1,5 +1,14 @@
 == HEAD
 
+== 2.1.2 (May 11, 2013)
+
+* Revert root `color` and `background` normalizations.
+
+== 2.1.1 (April 8, 2013)
+
+* Normalize root `color` and `background` to counter the effects of system
+  color schemes.
+
 == 2.1.0 (January 21, 2013)
 
 * Normalize `text-transform` for `button` and `select`.
@@ -21,17 +30,6 @@
 * Remove all heading normalizations except `h1` font size.
 * Form elements automatically inherit `font-family` from ancestor.
 * Drop support for IE 6/7, Firefox < 4, and Safari < 5.
-
-== 1.1.0 (January 21, 2013)
-
-* Normalize `text-transform` for `button` and `select`.
-* Normalize `hr` element (excluding IE 6/7).
-* Add `main` element to HTML5 display definitions.
-* Fix cursor style for disabled button `input`.
-
-== 1.0.2 (November 17, 2012)
-
-* Correct `h6` font size normalization.
 
 == 1.0.1 (August 19, 2012)
 
