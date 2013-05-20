@@ -32,14 +32,6 @@ hgroup, nav, section {
   -webkit-font-smoothing: antialiased;
 }
 
-[placeholder]:focus::-webkit-input-placeholder {
-  /* Get rid of persistent placeholders in webkit, where the placeholder
-     hangs around like an old fart. More here:
-     http://adactio.com/journal/6147/
-  */
-  color: transparent;
-}
-
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -222,7 +214,6 @@ hgroup, nav, section {
   }
 }
 
-
 /* spaced children */
 
 .horizontal > .spaced {
@@ -231,94 +222,6 @@ hgroup, nav, section {
 
 .vertical > .spaced {
   margin: 1.3333em 0;
-}
-
-/* Putting objects of unknown width/height in the centre */
-
-.central {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -o-box;
-  display: -ms-box;
-  display: box;
-
-  /* FF shrinks the width of boxes with display: box; */
-  width: 100%;
-
-  -webkit-box-align: center;
-  -moz-box-align:    center;
-  -o-box-align:      center;
-  box-align:         center;
-
-  -webkit-box-pack: center;
-  -moz-box-pack:    center;
-  -o-box-pack:      center;
-  box-pack:         center;
-}
-
-/* Links as buttons, thumbnails,  classes */
-
-.button:hover,
-.button:focus {
-  text-decoration: none;
-}
-
-.button {
-  
-  @include background-clip(padding-box);
-  @include background-origin(padding-box);
-  display: inline-block;
-
-  overflow: hidden;
-  padding-right: 0.75em;
-  padding-left: 0.75em;
-
-  height: 2em;
-  border-width: 0;
-  background-repeat: no-repeat;
-
-  color: rgb(96,96,96);
-  vertical-align: baseline;
-  text-align: center;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 2em;
-
-  cursor: pointer;
-}
-
-.button.loading,
-.button.disabled {
-  opacity: 0.6;
-}
-
-.button input {
-  display: inline;
-  margin-right: 0.5em;
-  margin-left: 0.5em;
-  height: auto;
-  vertical-align: baseline;
-}
-
-/* .thumb */
-
-.thumb {
-
-  @include background-size(100% auto);
-  display: inline-block;
-  overflow: hidden;
-
-  padding-top: 64px;
-  width: 64px;
-  height: 0;
-
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  color: inherit;
-  vertical-align: baseline;
-
-  text-decoration: none;
 }
 
 /* Positioning */
