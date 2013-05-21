@@ -968,6 +968,9 @@ input[type="submit"],
     height: auto;
     vertical-align: baseline; }
 
+.btn {
+  display: inline-block; }
+
 .button-group {
   white-space: nowrap; }
   .button-group .button {
