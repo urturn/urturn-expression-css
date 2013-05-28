@@ -1311,7 +1311,7 @@ input[type="submit"],
   .panel-button.nope {
     color: #be1d25; }
 
-.sticker {
+.ut-item {
   position: absolute;
   border: .2em solid transparent;
   box-shadow: none;
