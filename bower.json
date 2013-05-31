@@ -13,6 +13,9 @@
   "styles": [
     "css/style.css"
   ],
+  "main": [
+    "css/style.css", "css/style_edit.css", "css/style_play.css"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/urturn/urturn-expression-css.git"
