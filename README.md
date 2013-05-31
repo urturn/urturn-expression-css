@@ -8,6 +8,12 @@ Base CSS for Urturn expressions
 - [style_play.css](http://urturn.github.io/urturn-expression-css/css/style_play.css): normalize.css + urturn classes + buttons
 - [icons.css](http://urturn.github.io/urturn-expression-css/css/icons.css)
 
+Build & Deploy
+--------------
+`rake install` will install a git pre-commit hook that will ensure css is generated.
+`rake compile` will compile the sass source.
+`rake publish` will take the commited code and create a new tag in the repository.
+
 Credits
 -------
 
