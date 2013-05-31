@@ -4,7 +4,9 @@ task :compile do
 end
 
 task :install do
+  puts("install Git pre-commit hook")
   system("cp git-pre-commit-hook .git/hooks/pre-commit")
+  system("chmod u+x .git/hooks/pre-commit")
 end
 
 task :precommit => :compile
