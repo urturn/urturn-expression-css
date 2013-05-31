@@ -13,7 +13,7 @@ end
 
 task :publish do
   puts("tag a new version of urturn-expression-css")
-  version = JSON.parse(File.read("package.json"))['version']
+  version = JSON.parse(File.read("bower.json"))['version']
   system("git tag v#{version}")
   system("git push && git push --tags")
 end
