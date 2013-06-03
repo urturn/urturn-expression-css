@@ -3,6 +3,19 @@ require "json"
 desc "Compile the css"
 task :compile do
   system("compass compile && git add css")
+  bower = JSON.parse(File.read("bower.json"))
+  File.write('component.urturn.com', JSON.pretty_generate(
+  {
+    name: bower['name'],
+    version: bower['version'],
+    main: ["css/style.css"],
+    assets: [
+      "fonts/urturn_icons.eot",
+      "fonts/urturn_icons.svg",
+      "fonts/urturn_icons.ttf",
+      "fonts/urturn_icons.woff"
+    ]
+  }))
 end
 
 task :install do

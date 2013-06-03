@@ -1,6 +1,6 @@
 {
   "name": "urturn-expression-css",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Emmanuel Vuigner for Urturn",
   "homepage": "http://urturn.github.io/urturn-expression-css/",
   "main": "css/style.css",
@@ -10,12 +10,7 @@
       "url": "https://github.com/urturn/urturn-expression-css/blob/master/LICENSE"
     }
   ],
-  "styles": [
-    "css/style.css"
-  ],
-  "main": [
-    "css/style.css", "css/style_edit.css", "css/style_play.css"
-  ],
+  "main": "component.urturn.json",
   "repository": {
     "type": "git",
     "url": "https://github.com/urturn/urturn-expression-css.git"
