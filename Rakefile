@@ -4,7 +4,7 @@ desc "Compile the css"
 task :compile do
   system("compass compile && git add css")
   bower = JSON.parse(File.read("bower.json"))
-  File.write('component.urturn.com', JSON.pretty_generate(
+  File.write('component.urturn.json', JSON.pretty_generate(
   {
     name: bower['name'],
     version: bower['version'],
