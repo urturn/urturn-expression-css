@@ -8,7 +8,7 @@ task :compile do
   {
     name: bower['name'],
     version: bower['version'],
-    main: ["css/style.css"],
+    main: ["css/styles.css"],
     assets: [
       "fonts/urturn_icons.eot",
       "fonts/urturn_icons.svg",
