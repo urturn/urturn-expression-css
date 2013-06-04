@@ -32,3 +32,4 @@ task :publish do
 end
 
 task :precommit => :compile
+task :default => :compile
