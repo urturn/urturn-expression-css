@@ -926,7 +926,7 @@ input[type="submit"],
   cursor: pointer;
   -webkit-appearance: button; }
 
-.button {
+.button, .edit-button {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -953,15 +953,15 @@ input[type="submit"],
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none; }
-  .button:hover, .button:focus, .button:active {
+  .button:hover, .edit-button:hover, .button:focus, .edit-button:focus, .button:active, .edit-button:active {
     color: #474747;
     cursor: pointer;
     text-decoration: none; }
-  .button:focus {
+  .button:focus, .edit-button:focus {
     outline: none; }
-  .button.loading, .button.disabled {
+  .button.loading, .loading.edit-button, .button.disabled, .disabled.edit-button {
     opacity: 0.6; }
-  .button input {
+  .button input, .edit-button input {
     display: inline;
     margin-right: 0.5em;
     margin-left: 0.5em;
@@ -973,14 +973,14 @@ input[type="submit"],
 
 .button-group {
   white-space: nowrap; }
-  .button-group .button {
+  .button-group .button, .button-group .edit-button {
     border-radius: 0; }
-    .button-group .button ~ .button {
+    .button-group .button ~ .button, .button-group .edit-button ~ .button, .button-group .button ~ .edit-button, .button-group .edit-button ~ .edit-button {
       border-left-width: 0; }
-    .button-group .button:first-of-type, .button-group .button:first-child {
+    .button-group .button:first-of-type, .button-group .edit-button:first-of-type, .button-group .button:first-child, .button-group .edit-button:first-child {
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px; }
-    .button-group .button:last-of-type, .button-group .button:last-child {
+    .button-group .button:last-of-type, .button-group .edit-button:last-of-type, .button-group .button:last-child, .button-group .edit-button:last-child {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
 
@@ -1134,15 +1134,15 @@ input[type="submit"],
     color: #430400;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-.button.red-button {
+.button.red-button, .red-button.edit-button {
   color: #c00f00; }
-  .button.red-button:hover, .button.red-button:focus {
+  .button.red-button:hover, .red-button.edit-button:hover, .button.red-button:focus, .red-button.edit-button:focus {
     border-color: #c00f00;
     background: rgba(193, 39, 45, 0.1);
     color: #c00f00;
     text-decoration: none;
     text-shadow: none; }
-  .button.red-button:focus {
+  .button.red-button:focus, .red-button.edit-button:focus {
     box-shadow: 0 6px #e60f00; }
 
 /* Sizes of the button */
@@ -1174,7 +1174,7 @@ input[type="submit"],
   font-size: 1.6em;
   line-height: 2.3em; }
 
-.medium-button {
+.medium-button, .edit-button {
   height: 2.4em;
   border-radius: 3px;
   font-weight: bold;
@@ -1194,21 +1194,18 @@ input[type="submit"],
   display: block;
   width: 100%; }
 
-/* Colors */
-/* Mobile Colors */
-/* Tips */
-.action-button {
+.action-button, .edit-button {
   z-index: 20;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.65);
   color: white; }
-  .action-button:hover, .action-button:active, .action-button:focus, .action-button.active {
+  .action-button:hover, .edit-button:hover, .action-button:active, .edit-button:active, .action-button:focus, .edit-button:focus, .action-button.active, .active.edit-button {
     color: white;
     background-color: black; }
 
-.action-button-wrap .button {
+.action-button-wrap .button, .action-button-wrap .edit-button {
   margin-right: 0.3em; }
-  .action-button-wrap .button:last-child {
+  .action-button-wrap .button:last-child, .action-button-wrap .edit-button:last-child {
     margin-right: 0; }
 
 .item-button {
