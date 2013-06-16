@@ -1,10 +1,20 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #e3e3e3;
+}
+
+body.webdoc_expression_wrapper {background:white;}
+
+.page-wrap {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
 #header_online,
 #header_localhost {
   display:none;
-}
-
-#main {
-  padding-top: 20px; 
 }
 
 /* Style for the doc page */
@@ -43,3 +53,26 @@
   background: #eee;
   margin: .5em 1em .5em 0;
 }
+
+.doc-main {
+  counter-reset: steps;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2em;
+  background: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px; }
+  .doc-main > header {
+    margin: -2em -2em 2em -2em;
+    padding: 1em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: #f0f0f0;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 3px 3px 0 0;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+    .doc-main > header > *:last-child {
+      margin-bottom: 0; }
+
