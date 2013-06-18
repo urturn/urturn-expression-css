@@ -11,8 +11,7 @@ input[type="submit"],
 }
 
 
-.button {
-
+.ut-button {
   @include background-clip(padding-box);
   @include background-origin(padding-box);
   display: inline-block;
@@ -69,13 +68,13 @@ input[type="submit"],
   display: inline-block;
 }
 
-.button-group {
+.ut-button-group {
   white-space: nowrap;
 
-  .button {
+  .ut-button {
     border-radius: 0;
 
-    ~ .button {
+    ~ .ut-button {
       border-left-width: 0;
     }
 
@@ -93,13 +92,13 @@ input[type="submit"],
   }
 }
 
-.dropdown-button {
+.ut-dropdown-button {
   padding-top: 15px;
   width: 15px;
   height: 0;
 }
 
-.gold-button {
+.ut-gold-button {
   color: $tip-text;
 
   background: $tip-border;
@@ -123,7 +122,7 @@ input[type="submit"],
   }
 }
 
-.dark-button {
+.ut-dark-button {
   @include linear-gradient(rgb(77,77,77), rgb(51,51,51));
 
   box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, -1px -1px 0 rgba(255,255,255,.05) inset;
@@ -149,7 +148,7 @@ input[type="submit"],
   }
 }
 
-.default-button {
+.ut-default-button {
 
   @include linear-gradient(rgb(251,251,251), rgb(221,221,221));
 
@@ -178,12 +177,12 @@ input[type="submit"],
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
   }
 
-  .button-group & {
+  .ut-button-group & {
     box-shadow: 0 1px 0 rgb(255,255,255) inset;
   }
 }
 
-.success-button {
+.ut-success-button {
 
   @include linear-gradient(rgb(142,221,79), rgb(108,188,67));
 
@@ -209,7 +208,7 @@ input[type="submit"],
   }
 }
 
-.primary-button {
+.ut-primary-button {
 
   @include linear-gradient($primary-button-background-highlight, $primary-button-background, $primary-button-background-highlight);
 
@@ -217,13 +216,13 @@ input[type="submit"],
   outline: none;
   border: 1px solid $primary-button-border;
   background-position: 0 0;
-  color: white;
+  color: $primary-button-color;
   text-shadow: 0 1px 0 rgba(0,0,0,.25);
 
   &:hover,
   &:focus {
     @include linear-gradient(lighten($primary-button-background-highlight,15%), $primary-button-background, lighten($primary-button-background-highlight,15%));
-    color: white;
+    color: $primary-button-color;
     text-decoration: none;
   }
 
@@ -236,7 +235,7 @@ input[type="submit"],
   }
 }
 
-.button.red-button {
+.ut-red-button {
   color: $bloody-red;
 
   &:hover,
@@ -255,7 +254,7 @@ input[type="submit"],
 
 
 /* Sizes of the button */
-.giant-button {
+.ut-giant-button {
   padding-right: 18px;
   padding-left: 18px;
   height: 2.9em;
@@ -265,7 +264,7 @@ input[type="submit"],
   line-height: 2.8em;
 }
 
-.huge-button {
+.ut-huge-button {
   padding-right: 14px;
   padding-left: 14px;
   height: 2.4em;
@@ -275,7 +274,7 @@ input[type="submit"],
   line-height: 2.2em;
 }
 
-.large-button {
+.ut-large-button {
   position: relative;
   padding-right: 12px;
   padding-left: 12px;
@@ -286,7 +285,7 @@ input[type="submit"],
   line-height: 2.3em;
 }
 
-.medium-button {
+.ut-medium-button {
   height: 2.4em;
   border-radius: 3px;
   font-weight: bold;
@@ -294,7 +293,7 @@ input[type="submit"],
   line-height: 2.2em;
 }
 
-.small-button {
+.ut-small-button {
   padding-right: 6px;
   padding-left: 6px;
   height: 2.2em;
@@ -304,12 +303,12 @@ input[type="submit"],
   line-height: 2em;
 }
 
-.full-width {
+.ut-full-width {
   display: block;
   width: 100%;
 }
 
-.action-button {
+.ut-action-button {
   z-index: 20;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.65);
@@ -324,8 +323,8 @@ input[type="submit"],
   }
 }
 
-.action-button-wrap {
-  .button {
+.ut-action-button-wrap {
+  .ut-button {
     margin-right: 0.3em;
     
     &:last-child {
@@ -333,7 +332,7 @@ input[type="submit"],
     }
   }
 }
-.item-button {
+.ut-item-button {
   @include linear-gradient(rgb(50,50,50),rgb(30,30,30));
   position: absolute;
   z-index: 10000;
@@ -397,7 +396,7 @@ input[type="submit"],
 }
 
 @media screen and (max-width: 320px) {
-  .item-button {
+  .ut-item-button {
     border: 1px solid white;
     width: 4.6em;
     height: 4.6em;
@@ -433,7 +432,7 @@ input[type="submit"],
   }
 }
 
-.panel-button {
+.ut-panel-button {
   position: absolute;
   box-shadow: 0 0 0 1px #b4b4b4 inset;
   border-radius: 50%;
@@ -462,18 +461,18 @@ input[type="submit"],
   } 
 }
 
-.edit-button {
-  @extend .action-button;
-  @extend .large-button;
-  @extend .button;
+.ut-edit-button {
+  @extend .ut-action-button;
+  @extend .ut-large-button;
+  @extend .ut-button;
 }
 
-.media-placeholder {
+.ut-media-placeholder {
   background-color: rgb(50, 50, 50);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
 }
 
-.media-button {
+.ut-media-button {
   width: 102px;
   height: 66px;
 
@@ -538,8 +537,7 @@ input[type="submit"],
   }
 }
 
-
-.ut-item {
+.ut-ut-item {
   position: absolute;
   border: .2em solid transparent;
   box-shadow: none;
