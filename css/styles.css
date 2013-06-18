@@ -1228,7 +1228,7 @@ input[type="submit"],
     .ut-media-button.small::before {
       font-size: 18px; }
 
-.ut-ut-item {
+.ut-item {
   position: absolute;
   border: .2em solid transparent;
   box-shadow: none;
