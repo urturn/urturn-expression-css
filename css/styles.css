@@ -348,6 +348,7 @@ hgroup, nav, section {
   -o-background-origin: padding-box;
   background-origin: padding-box; }
 
+.webdoc_expression_wrapper,
 .urturn_expression_wrapper {
   position: relative;
   top: 0;

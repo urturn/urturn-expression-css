@@ -1,6 +1,6 @@
 {
   "name": "urturn-expression-css",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "main": [
     "css/styles.css"
   ],
