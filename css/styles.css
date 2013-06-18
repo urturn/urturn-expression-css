@@ -1358,7 +1358,6 @@ input[type="submit"],
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -1374,7 +1373,6 @@ you can use the generic selector below, but it's slower:
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
 .icon_zoom_out:before {
