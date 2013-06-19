@@ -336,7 +336,7 @@ input[type="submit"],
   @include linear-gradient(rgb(50,50,50),rgb(30,30,30));
   position: absolute;
   z-index: 10000;
-  display: none;
+  display: block;
   padding: 0;
   
   width: 3.6em;

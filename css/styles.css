@@ -1090,7 +1090,7 @@ input[type="submit"],
   background-image: linear-gradient(to bottom, #323232, #1e1e1e);
   position: absolute;
   z-index: 10000;
-  display: none;
+  display: block;
   padding: 0;
   width: 3.6em;
   height: 3.6em;

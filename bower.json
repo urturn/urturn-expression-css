@@ -3,14 +3,13 @@
   "version": "0.6.3",
   "author": "Emmanuel Vuigner for Urturn",
   "homepage": "http://urturn.github.io/urturn-expression-css/",
-  "main": "css/style.css",
+  "main": "component.urturn.json",
   "licenses": [
     {
       "type": "AGPL-3",
       "url": "https://github.com/urturn/urturn-expression-css/blob/master/LICENSE"
     }
   ],
-  "main": "component.urturn.json",
   "repository": {
     "type": "git",
     "url": "https://github.com/urturn/urturn-expression-css.git"
@@ -19,5 +18,8 @@
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "devDependencies": {
+    "bootstrap-urturn": "git@github.com:urturn/bootstrap-urturn.git#~1.1.0"
+  }
 }

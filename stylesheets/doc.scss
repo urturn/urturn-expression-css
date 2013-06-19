@@ -3,6 +3,10 @@ body {
   background-color: #e3e3e3;
 }
 
+#overview {
+  padding-top: 20px;
+}
+
 body.webdoc_expression_wrapper {background:white;}
 
 .page-wrap {
@@ -55,10 +59,12 @@ body.webdoc_expression_wrapper {background:white;}
 .box1 {
   font-size: 16px;
   display: inline-block;
-  width: 15em;
+  width: 13em;
   padding: .25em .5em;
   background: #eee;
   margin: .5em 1em .5em 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .doc-main {
