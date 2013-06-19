@@ -89,3 +89,45 @@ body.webdoc_expression_wrapper {background:white;}
     .doc-main > header > *:last-child {
       margin-bottom: 0; }
 
+.nav-tabs.nav-stacked {
+  > li {
+    > a {
+      background-color: white;
+      border-color: rgb(204,204,204);
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: rgb(204,204,204);
+        background-color: rgb(245,245,245);
+      }
+    }
+
+    &.active > a {
+      font-weight: bold;
+    }
+  }
+
+  > li.section {
+    > a {
+      color: rgb(60,60,60);
+      font-weight: bold;
+
+      background-color: rgb(240,240,240);
+      box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+
+      &::before {
+        display: inline-block;
+        margin-right: 0.5em;
+      }
+    }
+
+    ~ li:not(.section) > a {
+      padding-left: 2.333em;
+    }
+  }
+
+  > li.sidenav-sub > a {
+    padding-left: 4em !important;
+  }
+}
