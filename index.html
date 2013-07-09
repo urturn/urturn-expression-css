@@ -54,13 +54,38 @@
       <div class="span3">
         <ul class="nav nav-tabs nav-stacked bs-docs-sidenav bs-docs-sidebar nav-tabs nav-stacked ">
           <!-- <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-          <li><a href="#indexes"><i class="icon-chevron-right"></i> Indexes</a></li>
           <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li> -->
+          <li><a href="#globals"><i class="icon-chevron-right"></i> Globals</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+          <li><a href="#indexes"><i class="icon-chevron-right"></i> Lists</a></li>
           <li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
         </ul>
       </div>
       <div class="doc-main span9">
+
+      <!-- Globals
+        ================================================== -->
+        <section id="globals">
+          <div class="page-header">
+            <h1>Globals</h1>
+          </div>
+
+          <p> Expressions are served encapsuled in a <code>.urturn-expression-wrapper</code> class that apply some defaults style:</p>
+
+<pre class="prettyprint">body {
+  box-sizing: border-box;
+  background-origin: padding-box;
+}
+</pre>
+
+<pre class="prettyprint">.urturn-expression-wrapper {
+  font-size: 62.5%;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+</pre>
+
+        </section>
 
       <!-- Buttons
         ================================================== -->
@@ -172,6 +197,52 @@
 
         </section>
 
+
+      <!-- Indexes
+        ================================================== -->
+        <section id="indexes">
+          <div class="page-header">
+            <h1>Lists</h1>
+          </div>
+
+          <p> Unorderd lists can be display vertically <code>.vertical</code> or horizontaly <code>.horizontal</code> extening the <code>.index</code> class. With margins by adding <code>.spaced</code></p>
+
+        <p><code>.horizontal</code>
+
+<pre class="prettyprint">&lt;ul class="horizontal index"&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;ul&gt;
+</pre>
+
+            <ul class="horizontal index">
+              <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+              <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+              <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+            </ul>
+          </p>
+  
+          <p><code>.vertical</code>
+
+<pre class="prettyprint">&lt;ul class="horizontal index spaced"&gt;
+&lt;ul class="vertical index"&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;ul&gt;
+</pre>
+
+          <ul class="vertical index spaced">
+            <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+            <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+            <li><a href="#" class="ut-medium-button ut-default-button ut-button">Button</a></li>
+          </ul>
+          </p>
+        </section>
+
+      <!-- Icons
+        ================================================== -->
         <section id="icons">
           <div class="page-header">
             <h1>Icons</h1>
