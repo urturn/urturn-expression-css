@@ -131,3 +131,8 @@ body.webdoc_expression_wrapper {background:white;}
     padding-left: 4em !important;
   }
 }
+
+/* Buttons sizes table */
+.buttons-size-table > tbody > tr > td:first-child {
+  font-size: 62.5%;
+}

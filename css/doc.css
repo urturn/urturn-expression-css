@@ -101,3 +101,7 @@ body.webdoc_expression_wrapper {
   padding-left: 2.333em; }
 .nav-tabs.nav-stacked > li.sidenav-sub > a {
   padding-left: 4em !important; }
+
+/* Buttons sizes table */
+.buttons-size-table > tbody > tr > td:first-child {
+  font-size: 62.5%; }
