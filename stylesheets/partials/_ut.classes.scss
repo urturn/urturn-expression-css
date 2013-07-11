@@ -66,6 +66,7 @@ hgroup, nav, section {
 
 .no-select {
   @include user-select(none);
+  cursor: default;
 }
 
 /* Positioning */

@@ -403,7 +403,8 @@ hgroup, nav, section {
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  user-select: none;
+  cursor: default; }
 
 /* Positioning */
 .tl, .tr, .bl, .br, .tls, .trs, .bls, .brs {
