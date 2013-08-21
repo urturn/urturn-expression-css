@@ -1,6 +1,6 @@
 {
   "name": "urturn-expression-css",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "author": "Emmanuel Vuigner for Urturn",
   "homepage": "http://urturn.github.io/urturn-expression-css/",
   "main": "component.urturn.json",

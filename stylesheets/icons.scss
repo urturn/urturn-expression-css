@@ -32,7 +32,6 @@ you can use the generic selector below, but it's slower:
 	text-transform: none;
 	-webkit-font-smoothing: antialiased;
 }
-
 .icon_zoom_out:before {
 	content: "\e000";
 }
@@ -135,7 +134,7 @@ you can use the generic selector below, but it's slower:
 .icon_search:before {
 	content: "\e021";
 }
-.icon_scissors:before {
+.icon_scissors-20:before {
 	content: "\e022";
 }
 .icon_rotate:before {
@@ -315,96 +314,99 @@ you can use the generic selector below, but it's slower:
 .icon_facebook_alt:before {
 	content: "\e05d";
 }
-.icon_eraser:before {
+.icon_eye:before {
 	content: "\e05e";
 }
-.icon_edit:before {
+.icon_eraser:before {
 	content: "\e05f";
 }
-.icon_delete:before {
+.icon_edit:before {
 	content: "\e060";
 }
-.icon_delete_alt:before {
+.icon_delete:before {
 	content: "\e061";
 }
-.icon_dailymotion:before {
+.icon_delete_alt:before {
 	content: "\e062";
 }
-.icon_contact:before {
+.icon_dailymotion:before {
 	content: "\e063";
 }
-.icon_connect:before {
+.icon_contact:before {
 	content: "\e064";
 }
-.icon_comment:before {
+.icon_connect:before {
 	content: "\e065";
 }
-.icon_comment_outline:before {
+.icon_comment:before {
 	content: "\e066";
 }
-.icon_cloud_upload:before {
+.icon_comment_outline:before {
 	content: "\e067";
 }
-.icon_clock:before {
+.icon_cloud_upload:before {
 	content: "\e068";
 }
-.icon_check:before {
+.icon_clock:before {
 	content: "\e069";
 }
-.icon_check_alt:before {
+.icon_check:before {
 	content: "\e06a";
 }
-.icon_category:before {
+.icon_check_alt:before {
 	content: "\e06b";
 }
-.icon_camera:before {
+.icon_category:before {
 	content: "\e06c";
 }
-.icon_camera_switch:before {
+.icon_camera:before {
 	content: "\e06d";
 }
-.icon_bucket:before {
+.icon_camera_switch:before {
 	content: "\e06e";
 }
-.icon_brush:before {
+.icon_bucket:before {
 	content: "\e06f";
 }
-.icon_browse:before {
+.icon_brush:before {
 	content: "\e070";
 }
-.icon_blogger:before {
+.icon_browse:before {
 	content: "\e071";
 }
-.icon_block:before {
+.icon_blogger:before {
 	content: "\e072";
 }
-.icon_background:before {
+.icon_block:before {
 	content: "\e073";
 }
-.icon_arrow_up:before {
+.icon_background:before {
 	content: "\e074";
 }
-.icon_arrow_right:before {
+.icon_arrow_up:before {
 	content: "\e075";
 }
-.icon_arrow_left:before {
+.icon_arrow_right:before {
 	content: "\e076";
 }
-.icon_arrow_down:before {
+.icon_arrow_left:before {
 	content: "\e077";
 }
-.icon_alert:before {
+.icon_arrow_down:before {
 	content: "\e078";
 }
-.icon_add:before {
+.icon_alert:before {
 	content: "\e079";
 }
-.icon_add_friends:before {
+.icon_add:before {
 	content: "\e07a";
 }
-.icon_add_alt:before {
+.icon_add_friends:before {
 	content: "\e07b";
 }
-.icon_activity:before {
+.icon_add_alt:before {
 	content: "\e07c";
+}
+.icon_activity:before {
+	content: "\e07d";
 }
