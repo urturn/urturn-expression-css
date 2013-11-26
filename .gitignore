@@ -3,3 +3,4 @@
 /.s3private.json
 .urturn/
 .sass-cache/
+.DS_Store
