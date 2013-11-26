@@ -14,6 +14,13 @@ Build & Deploy
 `rake compile` will compile the sass source.
 `rake publish` will take the commited code and create a new tag in the repository.
 
+Update the fonts files
+----------------------
+* Replace the files in fonts folder with the new ones
+* Copy the .icon_***:before classes (like .icon_activity:before) from the the style.css newly generated into icons.scss by replacing the actuals
+* Change the version in bower.json
+* refer to build and deploy for compiling and publishing
+
 Credits
 -------
 
